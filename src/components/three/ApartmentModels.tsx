@@ -9,21 +9,23 @@ import {
   getProceduralTextures,
 } from '../../utils/proceduralTextures';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const MODEL_PATHS = {
-  shell: '/models/00-apartment-shell.glb',
-  foyer: '/models/01-foyer.glb',
-  kitchen: '/models/02-kitchen.glb',
-  living: '/models/03-living.glb',
-  bedroom: '/models/04-bedroom.glb',
-  bathroom: '/models/05-bathroom.glb',
-  balcony: '/models/06-balcony-skyline.glb',
+  shell: `${BASE_URL}models/00-apartment-shell.glb`,
+  foyer: `${BASE_URL}models/01-foyer.glb`,
+  kitchen: `${BASE_URL}models/02-kitchen.glb`,
+  living: `${BASE_URL}models/03-living.glb`,
+  bedroom: `${BASE_URL}models/04-bedroom.glb`,
+  bathroom: `${BASE_URL}models/05-bathroom.glb`,
+  balcony: `${BASE_URL}models/06-balcony-skyline.glb`,
   // Custom replacement & accent assets
-  customBed: '/models/bed.glb',
-  customKitchenPendant: '/models/lampugantung.glb',
-  customLivingLamp: '/models/lampumeja.glb',
-  customWardrobe: '/models/lemari.glb',
-  customSofa: '/models/sofa.glb',
-  customTowel: '/models/towel.glb',
+  customBed: `${BASE_URL}models/bed.glb`,
+  customKitchenPendant: `${BASE_URL}models/lampugantung.glb`,
+  customLivingLamp: `${BASE_URL}models/lampumeja.glb`,
+  customWardrobe: `${BASE_URL}models/lemari.glb`,
+  customSofa: `${BASE_URL}models/sofa.glb`,
+  customTowel: `${BASE_URL}models/towel.glb`,
 } as const;
 
 Object.values(MODEL_PATHS).forEach((path) => {
